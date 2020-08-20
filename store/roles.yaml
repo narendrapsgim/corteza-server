@@ -1,9 +1,6 @@
 import:
   - github.com/cortezaproject/corteza-server/system/types
 
-interface:
-  - system/service
-
 fields:
   - { field: ID }
   - { field: Name,                                   sortable: true }
@@ -31,6 +28,10 @@ lookups:
       searches for role by its name
 
       It returns only valid roles (not deleted, not archived)
+
+functions:
+  - name: RoleMetrics
+    return: [ "*types.RoleMetrics", "error" ]
 
 rdbms:
   alias: rl

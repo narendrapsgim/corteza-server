@@ -1,9 +1,6 @@
 import:
   - github.com/cortezaproject/corteza-server/system/types
 
-interface:
-  - system/service
-
 fields:
   - { field: ID }
   - { field: Email,                                  sortable: true, unique: true, fts: true }
@@ -42,6 +39,13 @@ lookups:
       searches for user by their username
 
       It returns only valid users (not deleted, not suspended)
+
+functions:
+  - name: CountUsers
+    arguments: [ { name: f, type: types.UserFilter } ]
+    return: [ "uint", "error" ]
+  - name: UserMetrics
+    return: [ "*types.UserMetrics", "error" ]
 
 rdbms:
   alias: usr

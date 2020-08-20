@@ -1,9 +1,6 @@
 import:
   - github.com/cortezaproject/corteza-server/compose/types
 
-interface:
-  - compose/service
-
 types:
   type: types.Module
 
@@ -19,9 +16,13 @@ fields:
 
 
 lookups:
-  - fields: [ Handle ]
+  - fields: [ NamespaceID, Handle ]
     description: |-
       searches for compose module by handle (case-insensitive)
+
+  - fields: [ NamespaceID, Name ]
+    description: |-
+      searches for compose module by name (case-insensitive)
 
   - fields: [ ID ]
     description: |-

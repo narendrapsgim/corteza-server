@@ -1,9 +1,6 @@
 import:
   - github.com/cortezaproject/corteza-server/compose/types
 
-interface:
-  - compose/service
-
 types:
   type: types.ModuleField
 
@@ -32,4 +29,6 @@ rdbms:
 
 
 search:
-  disable: true
+  enablePaging: false
+  enableSorting: false
+  enableFilterCheckFunction: false

@@ -203,7 +203,7 @@ func (Schema) RbacRules() *Table {
 		ColumnDef("operation", ColumnTypeVarchar, ColumnTypeLength(50)),
 		ColumnDef("access", ColumnTypeInteger),
 
-		PrimaryKey(IColumn("rel_role", "resource", "operation", "access")),
+		PrimaryKey(IColumn("rel_role", "resource", "operation")),
 	)
 }
 

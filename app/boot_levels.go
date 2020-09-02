@@ -4,6 +4,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"time"
+
 	cmpService "github.com/cortezaproject/corteza-server/compose/service"
 	cmpEvent "github.com/cortezaproject/corteza-server/compose/service/event"
 	msgService "github.com/cortezaproject/corteza-server/messaging/service"
@@ -28,7 +30,6 @@ import (
 	sysService "github.com/cortezaproject/corteza-server/system/service"
 	sysEvent "github.com/cortezaproject/corteza-server/system/service/event"
 	"go.uber.org/zap"
-	"time"
 )
 
 type (
